@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  busticco:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: busticco
+    restart: unless-stopped
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - busticco-network
+
+networks:
+  busticco-network:
+    driver: bridge
