@@ -57,10 +57,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppButton />
+          <div className="relative w-full overflow-x-hidden">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </div>
         </ThemeProvider>
       </body>
     </html>

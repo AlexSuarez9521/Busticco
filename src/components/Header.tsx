@@ -45,13 +45,13 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  'flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200',
+                  'flex items-center px-5 py-2 text-sm font-medium rounded-lg transition-all duration-200',
                   item.active
                     ? 'text-[#00D4FF]'
                     : 'text-white/70 hover:text-white'

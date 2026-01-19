@@ -112,7 +112,7 @@ export default function ServicesSection() {
           top: 0,
           left: '50%',
           transform: 'translateX(-50%)',
-          width: '100vw',
+          width: '100%',
           height: '100%',
           overflow: 'hidden'
         }}
