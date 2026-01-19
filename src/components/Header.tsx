@@ -3,19 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { label: 'Inicio', href: '/', active: true },
-  {
-    label: 'Nosotros',
-    href: '/#nosotros',
-    children: [
-      { label: 'Historia', href: '/#historia' },
-      { label: 'Equipo', href: '/#equipo' },
-    ],
-  },
+  { label: 'Nosotros', href: '/#nosotros' },
   { label: 'Nuestro Proceso', href: '/#proceso' },
   { label: 'Contacto', href: '/#contacto' },
   { label: 'Portafolio', href: '/portafolio' },
@@ -24,7 +17,6 @@ const navItems = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,48 +48,18 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <div
+              <Link
                 key={item.label}
-                className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                href={item.href}
+                className={cn(
+                  'flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200',
+                  item.active
+                    ? 'text-[#00D4FF]'
+                    : 'text-white/70 hover:text-white'
+                )}
               >
-                <Link
-                  href={item.href}
-                  className={cn(
-                    'flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200',
-                    item.active
-                      ? 'text-[#00D4FF]'
-                      : 'text-white/70 hover:text-white'
-                  )}
-                >
-                  {item.label}
-                  {item.children && <ChevronDown className="w-4 h-4" />}
-                </Link>
-
-                {/* Dropdown */}
-                <AnimatePresence>
-                  {item.children && activeDropdown === item.label && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 py-2 bg-[#111111] rounded-xl border border-[#2A2A2A] min-w-[180px] shadow-xl"
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-white/70 hover:text-[#00D4FF] hover:bg-white/5 transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -133,30 +95,19 @@ export default function Header() {
             >
               <div className="py-4 border-t border-[#2A2A2A]">
                 {navItems.map((item) => (
-                  <div key={item.label}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        'block px-4 py-3 rounded-lg transition-colors',
-                        item.active
-                          ? 'text-[#00D4FF]'
-                          : 'text-white/70 hover:text-white hover:bg-white/5'
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                    {item.children?.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        onClick={() => setIsOpen(false)}
-                        className="block px-8 py-2 text-sm text-white/50 hover:text-[#00D4FF] transition-colors"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      'block px-4 py-3 rounded-lg transition-colors',
+                      item.active
+                        ? 'text-[#00D4FF]'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
                 ))}
               </div>
             </motion.div>
