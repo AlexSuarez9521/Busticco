@@ -49,7 +49,7 @@ export default function AboutSection() {
   // Generate particles only on client side to avoid hydration mismatch
   useEffect(() => {
     const colors = ['#00D4FF', '#E91E8C', '#BFFF00', '#8B5CF6'];
-    const generatedParticles = Array.from({ length: 20 }, (_, i) => ({
+    const generatedParticles = Array.from({ length: 10 }, (_, i) => ({
       id: i,
       size: Math.random() * 3 + 2,
       x: Math.random() * 100,
@@ -178,26 +178,14 @@ export default function AboutSection() {
               {values.map((value, index) => (
                 <motion.div
                   key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                  className="p-6 rounded-2xl bg-[#111111] border border-[#2A2A2A] hover:border-[#3A3A3A] transition-all duration-300 group"
-                  style={{
-                    boxShadow: 'none',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = `0 0 30px ${value.color}33`;
-                    e.currentTarget.style.borderColor = `${value.color}50`;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = 'none';
-                    e.currentTarget.style.borderColor = '#2A2A2A';
-                  }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="p-6 rounded-2xl bg-[#111111] border border-[#2A2A2A] hover:border-[#3A3A3A] hover:bg-[#151515] transition-all duration-300 group"
                 >
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300"
                     style={{ backgroundColor: `${value.color}20` }}
                   >
                     <value.icon className="w-6 h-6" style={{ color: value.color }} />

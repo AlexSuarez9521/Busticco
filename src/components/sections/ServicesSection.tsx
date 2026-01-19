@@ -91,7 +91,7 @@ export default function ServicesSection() {
   // Generate particles only on client side to avoid hydration mismatch
   useEffect(() => {
     const colors = ['#00D4FF', '#E91E8C', '#BFFF00', '#8B5CF6'];
-    const generatedParticles = Array.from({ length: 25 }, (_, i) => ({
+    const generatedParticles = Array.from({ length: 12 }, (_, i) => ({
       id: i,
       size: Math.random() * 3 + 2,
       x: Math.random() * 100,
@@ -159,31 +159,19 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
               className="group"
             >
               <div
-                className="relative h-full bg-[#111111] rounded-2xl p-6 border border-[#2A2A2A] transition-all duration-500 hover:border-transparent overflow-hidden"
-                style={{
-                  boxShadow: 'none',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `0 0 50px ${service.glowColor}, 0 0 100px ${service.glowColor}40`;
-                  e.currentTarget.style.borderColor = service.glowColor.replace('0.3', '0.5');
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = 'none';
-                  e.currentTarget.style.borderColor = '#2A2A2A';
-                }}
+                className="relative h-full bg-[#111111] rounded-2xl p-6 border border-[#2A2A2A] transition-all duration-300 hover:border-[#3A3A3A] hover:bg-[#151515] overflow-hidden"
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5 transition-transform duration-300`}>
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
 
