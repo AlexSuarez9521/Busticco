@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonios" className="py-24 bg-[#0A0A0A] relative">
+    <section id="testimonios" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Floating Particles - Full viewport width */}
       <div
         className="absolute pointer-events-none z-0"

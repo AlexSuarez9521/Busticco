@@ -65,7 +65,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-[#0A0A0A] relative">
+    <section id="contacto" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Floating Particles - Full viewport width */}
       <div
         className="absolute pointer-events-none z-0"
@@ -105,8 +105,8 @@ export default function ContactSection() {
       </div>
 
       {/* Background */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-[#00D4FF]/10 blur-[120px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-[#E91E8C]/10 blur-[120px]" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 rounded-full bg-[#00D4FF]/10 blur-[120px] -translate-x-1/2" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 rounded-full bg-[#E91E8C]/10 blur-[120px] translate-x-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         <SectionTitle

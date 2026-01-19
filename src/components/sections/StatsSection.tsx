@@ -66,7 +66,7 @@ export default function StatsSection() {
   }, []);
 
   return (
-    <section className="py-20 bg-[#0A0A0A] relative">
+    <section className="py-20 bg-[#0A0A0A] relative overflow-hidden">
       {/* Floating Particles - Full viewport width */}
       <div
         className="absolute pointer-events-none z-0"

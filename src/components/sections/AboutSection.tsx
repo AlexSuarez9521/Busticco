@@ -62,7 +62,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section id="nosotros" className="py-24 bg-[#0A0A0A] relative">
+    <section id="nosotros" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Floating Particles - Full viewport width */}
       <div
         className="absolute pointer-events-none z-0"

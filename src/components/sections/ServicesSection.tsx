@@ -104,7 +104,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section id="servicios" className="py-24 bg-[#0A0A0A] relative">
+    <section id="servicios" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Floating Particles - Full viewport width within section */}
       <div
         className="absolute pointer-events-none z-0"
@@ -144,8 +144,8 @@ export default function ServicesSection() {
       </div>
 
       {/* Background orbs */}
-      <div className="absolute top-1/4 -left-32 w-64 h-64 rounded-full bg-[#E91E8C]/20 blur-[100px]" />
-      <div className="absolute bottom-1/4 -right-32 w-64 h-64 rounded-full bg-[#00D4FF]/20 blur-[100px]" />
+      <div className="absolute top-1/4 left-0 w-64 h-64 rounded-full bg-[#E91E8C]/20 blur-[100px] -translate-x-1/2" />
+      <div className="absolute bottom-1/4 right-0 w-64 h-64 rounded-full bg-[#00D4FF]/20 blur-[100px] translate-x-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         <SectionTitle
