@@ -39,9 +39,8 @@ export default function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl font-bold tracking-wider">
-              <span className="text-white">BUSTIC</span>
-              <span className="text-gradient">CO</span>
+            <span className="text-2xl font-bold tracking-wider bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] bg-clip-text text-transparent">
+              BUSTICCO
             </span>
           </Link>
 

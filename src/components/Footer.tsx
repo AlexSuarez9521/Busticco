@@ -38,9 +38,8 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold tracking-wider">
-                <span className="text-white">BUSTIC</span>
-                <span className="text-gradient">CO</span>
+              <span className="text-2xl font-bold tracking-wider bg-gradient-to-r from-[#8B5CF6] via-[#A78BFA] to-[#C4B5FD] bg-clip-text text-transparent">
+                BUSTICCO
               </span>
             </Link>
             <p className="text-[#6B6B6B] mb-6 leading-relaxed">
