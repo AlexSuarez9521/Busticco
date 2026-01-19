@@ -84,7 +84,7 @@ export default function ClientsSection() {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <SectionTitle
           badge="Clientes"
           title="Empresas Que"

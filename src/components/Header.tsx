@@ -35,7 +35,7 @@ export default function Header() {
           : 'bg-gradient-to-b from-[#0A0A0A]/50 to-transparent'
       )}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-8">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">

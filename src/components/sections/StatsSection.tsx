@@ -117,7 +117,7 @@ export default function StatsSection() {
         className="absolute right-1/4 top-1/2 w-64 h-64 rounded-full bg-[#00D4FF]/10 blur-[100px] z-0"
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div

@@ -101,7 +101,7 @@ export default function ProcessSection() {
       {/* Background elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-[#E91E8C]/5 via-transparent to-[#00D4FF]/5 blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <SectionTitle
           badge="Nuestro Proceso"
           title="Simple y"

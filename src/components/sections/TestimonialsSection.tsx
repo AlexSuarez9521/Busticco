@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
       <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-[#8B5CF6]/10 blur-[120px]" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full bg-[#E91E8C]/10 blur-[120px]" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <SectionTitle
           badge="Testimonios"
           title="Lo Que Dicen"

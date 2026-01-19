@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#050505] border-t border-[#1A1A1A]">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 sm:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
@@ -132,7 +132,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-[#1A1A1A]">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-6 sm:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#6B6B6B] text-sm text-center md:text-left">
               © {currentYear} BUSTICCO. Todos los derechos reservados.

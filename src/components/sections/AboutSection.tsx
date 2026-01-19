@@ -105,7 +105,7 @@ export default function AboutSection() {
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#8B5CF6]/10 blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-[#00D4FF]/10 blur-[120px]" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <motion.div

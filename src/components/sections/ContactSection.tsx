@@ -108,7 +108,7 @@ export default function ContactSection() {
       <div className="absolute top-1/4 left-0 w-96 h-96 rounded-full bg-[#00D4FF]/10 blur-[120px] -translate-x-1/2" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 rounded-full bg-[#E91E8C]/10 blur-[120px] translate-x-1/2" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 sm:px-8 relative z-10">
         <SectionTitle
           badge="Contacto"
           title="Hablemos de"
